@@ -2,6 +2,7 @@ import React from 'react'
 import { experience } from '../constants'
 import { projects } from '../constants'
 import { motion } from "framer-motion"
+import { TiExportOutline } from "react-icons/ti";
 
 function Projects() {
     return (
@@ -12,12 +13,12 @@ function Projects() {
                     <div key={index} className='flex flex-wrap lg:justify-center py-2 lg:py-8'>
 
                         <motion.div initial={{x:-100,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:1}} className='w-full lg:w-1/4 text-neutral-400 text-sm'>
-                            <img className='rounded' height={200} width={200} src={items.image} />
+                            <a href={items.github}><img className='rounded' height={200} width={200} src={items.image} /></a>
                         </motion.div>
 
                         <motion.div initial={{x:100,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:1}} className='w-full lg:w-3/4 max-w-xl'>
-                            <div>
-                                <h2 className='text-lg font-semibold mb-2'>{items.title} <a className='text-sm text-neutral-400' href={items.github}>| GITHUB</a></h2>
+                            <div className=''>
+                                <a href={items.github}><h2 className='text-lg font-semibold mb-2 flex items-center gap-2'>{items.title}<TiExportOutline /> </h2></a>
                             </div>
                             <p className='text-neutral-400 '>{items.description}</p>
                             <div className='flex flex-wrap gap-1'>

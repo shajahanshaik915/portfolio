@@ -27,8 +27,12 @@ export const AboutMe = () => {
                 transition={{duration:0.5}}
                 className='w-full lg:w-1/2'>
                     <div className='flex justify-center items-center lg:items-start'>
-                        <p className='my-2 max-w-lg py-6 '>
-                            {aboutme_content}
+                        <p className='my-2 max-w-lg py-6 flex flex-col gap-3 text-lg'>
+                            <p>• Graduate Computer Science at University of Central Missouri</p>
+                            <p>• Avid problem solver, tackling daily LeetCode challenges. Solutions on my  <a className='underline underline-offset-3 cursor-pointer' href='https://github.com/shajahanshaik915/problemSolving.git'>GitHub</a> repository.</p>
+                            <p>• Passionate about Open Source Contribution.</p>
+                            <p>• Love integrating DSA into my web projects. <a href='https://shajahanshaik915.github.io/pattern-match-game/' className='underline underline-offset-3'>Try My SimonGame</a>.</p>
+                            <p>• Exicted to work on new and challenging projects.</p>
                         </p>
                     </div>
                 </motion.div>
